@@ -1,0 +1,254 @@
+
+
+@import url("./footer.css");
+@import url("./contacto.css");
+
+
+:root{
+    ---color--primary:#111113;
+    ---color--second:#5C62EC;
+    ---color--hover: #3c4dae;
+    ---color--rellenos: #1C1E22;
+    ---color--border-cubes: #8192ba;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(---color--primary);
+    color: #Fff;
+}
+
+/*  Header */
+
+
+nav{
+    border-bottom: 1px solid #26292D;
+}
+nav div{
+    padding:0 30px;
+}
+.navbar-toggler{
+    background-color:var(---color--second);
+}
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-collapse > a{
+    color: #fff;
+}
+.navbar-brand{
+    font-size: 30px;
+}
+.navbar-brand  span{
+    color: var(---color--second);
+}
+.nav-item > a{
+    color: #fff;
+}
+
+.nav-item > a:hover{
+    color: var(---color--hover);
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-brand{
+        display: none;
+    }
+}
+
+
+/* main */
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 2.5rem;
+}
+            /* texto section hero*/
+.hero{
+    color: #fff;
+    min-height: 600px;
+}
+.texto-box h1{
+    text-align: center;
+}
+.texto-box h1 span{
+    color: var(---color--second);
+}
+.texto-box  h2 .texto-maquina{
+    color: #fff;
+    font-size: 30px;
+    border-right: .15em solid var(---color--second);
+    font-weight: bold;
+    letter-spacing: .15em;
+    animation:  blick .25s infinite step-end alternate;
+    overflow: hidden;
+}
+.hero .texto-box h5{
+    margin: 20px;
+    text-align: center;
+    color:var(---color--second);
+}
+                            /* animacion texto maquina escribir*/
+@keyframes blick{
+    50% {
+        border-color: transparent;
+    }
+}
+                            /* botones section hero */
+.hero .button-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 50px 0;
+    gap: 24px;
+}
+.hero  .button-box .btn-proyects{
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+    padding:10px 25px;
+    background: var(---color--second);
+} 
+.hero  .button-box .btn-cv{
+    cursor: pointer;
+    background: none;
+    color: #fff;
+    border-color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+    padding:10px 25px;
+}
+            /* acerca de */
+.acerca-de div > img{
+    width: 80%;
+    margin: auto;
+}
+.acerca-de .acerca-de-titulo{
+    text-align: center;
+}
+            /*  Proyectos*/
+.proyectos{
+    padding: 40px;
+}
+.proyectos img{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease;
+}
+.proyectos-contenedor{
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+.proyecto{
+    position: relative;
+}
+.proyecto:hover img{
+    opacity: 0.2;
+}
+.overlay{
+    transition: all .2s ease ;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.overlay p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.proyecto:hover .overlay{
+    opacity: 1;
+}
+.overlay .iconos-contenedor{
+    display: flex;
+}
+.overlay i{
+    color: var(---color--hover);
+    font-size: 60px;
+    margin: 20px;
+}
+
+
+@media (max-width: 768px){
+    .overlay p{
+        font-size: 20px ;
+    }
+    .overlay i{
+        font-size: 40px;
+    }
+}
+
+
+
+/* Footer */
+
+
+.div-footer{
+    width: 80vw;
+    margin: auto;
+    padding: 50px 130px;
+    border-top: 1px solid var(---color--rellenos);
+    border-bottom: 1px solid var(---color--rellenos);
+}
+
+.div-footer h3{
+    color: #fff;
+}
+.div-footer div ul{
+    list-style: none;
+}
+.div-footer div ul li{
+    margin: 5px;
+}
+.div-footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.div-footer ul li a:hover{
+    transition: all 1s;
+    color: var(---color--hover);
+}
+footer p{
+    color: var(---color--rellenos);
+    text-align: center;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .div-footer  div {
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-footer  div > h2{
+        font-size: 20px;
+    }
+
+
+    .div-footer div ul li{
+        font-size: 15px;
+        width:92px;
+    }
+
+}

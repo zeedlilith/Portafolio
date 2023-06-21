@@ -1,0 +1,62 @@
+@import url('./style.css');
+
+main .container-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+main .container-form .title h1{
+    text-align: center;
+    color: var(---color--second);
+    font-size: 60px;
+    margin-top: 40px;
+}
+main .container-form .title p{
+    color: #fff;
+    margin: 20px;
+}
+main .container-form form{
+    background-color: var(---color--rellenos);
+    width: 500px;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+main .container-form form .form-control{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+   
+}
+main .container-form form .form-control label{
+    color: #fff;
+    margin-bottom: 10px;
+}
+main .container-form form .form-control input{
+    height: 50px;
+    background: var(---color--primary);
+    color: #fff;
+    border: 1px solid var(---color--border-cubes);
+    border-radius: 5px;
+    padding: 5px;
+}
+main .container-form form .form-control textarea{
+    background: var(---color--primary);
+    color: #fff;
+    border: 1px solid var(---color--border-cubes);
+    border-radius: 5px;
+    padding: 5px;
+}
+main .container-form form .btn{
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    margin: 20px auto;
+    border: var(---color--border-cubes);
+    background-color: var(---color--second);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
